@@ -12,7 +12,7 @@ import feedparser
 #                                                                                   #
 #####################################################################################
 
-url_grafana = "https://github.com/grafana/grafana"
+
 
 #####################################################################################
 #                                                                                   #
@@ -41,13 +41,12 @@ def get_config(config_file="config/versions.yml"):
 
 def get_raw_feed_from_url(url):
     """
-        Get title list from passed rss url
+        Get raw feed from passed rss url
     """
-    print("Récupération du contenu de", url)
-    
     try:
         feed_list = feedparser.parse(url)
-        print(feed_list)
+        return feed_list
+
     except:
         print("Erreur lors de la récupération du feed", url)
         raise
@@ -78,10 +77,11 @@ def main():
     print("liste des repos: ")
     for user_github,repo in github_versions.items():
         feed_url = "https://github.com/" + user_github + "/" + repo + "/releases.atom "
-        print(feed_url, "\n\n")
+        print(feed_url, ": \n\n")
     
         # Return feed list from given versions : 
-        get_raw_feed_from_url(feed_url)
+        raw = get_raw_feed_from_url(feed_url)
+        print(raw.feed, "\n\n")
 
 if __name__ == "__main__":
     main()
