@@ -1,4 +1,5 @@
 from yaml import load,FullLoader
+from feedparser import *
 # from PyQt6.QtWidgets import QApplication, QLabel, QWidget
 
 """
