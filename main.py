@@ -71,13 +71,13 @@ def main():
     github_versions = versions["github"]
     liste_users_github = list(github_versions)
 
-    print("Available users for github: ", liste_users_github, "\n\n")
+    print("\nAvailable users for github: ", liste_users_github, "\n")
     
     # TODO ERWIN: passer par une fonction
-    print("Repos list: ")
+
     for user_github,repo in github_versions.items():
         feed_url = "https://github.com/" + user_github + "/" + repo + "/releases.atom "
-        print(feed_url, ": \n\n")
+        print("\n", feed_url, " :")
     
         # Return feed list from given repo : 
         raw = get_raw_feed_from_url(feed_url)
