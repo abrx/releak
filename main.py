@@ -1,5 +1,5 @@
 from yaml import load,FullLoader
-from feedparser import *
+import feedparser
 # from PyQt6.QtWidgets import QApplication, QLabel, QWidget
 
 """
@@ -39,6 +39,19 @@ def get_config(config_file="config/versions.yml"):
             raise
 
 
+def get_raw_feed_from_url(url):
+    """
+        Get title list from passed rss url
+    """
+    print("Récupération du contenu de", url)
+    
+    try:
+        feed_list = feedparser.parse(url)
+        print(feed_list)
+    except:
+        print("Erreur lors de la récupération du feed", url)
+        raise
+
 
 #####################################################################################
 #                                                                                   #
@@ -49,20 +62,26 @@ def get_config(config_file="config/versions.yml"):
 
 def main():
     """
-        récupère la config en yaml
+        Get yaml config
+        Build github urls
+        Return feed titles 
     """
     versions = get_config()
 
-    # retourne un dictionnaire
+    # Return dictionary of desired versions
     github_versions = versions["github"]
     liste_users_github = list(github_versions)
 
-    print("Liste des users disponibles pour github: ", liste_users_github)
+    print("Liste des users disponibles pour github: ", liste_users_github, "\n\n")
     
     # TODO ERWIN: passer par une fonction
     print("liste des repos: ")
     for user_github,repo in github_versions.items():
-        print("https://github.com/",user_github,"/",repo,"/releases.atom ",sep='')
+        feed_url = "https://github.com/" + user_github + "/" + repo + "/releases.atom "
+        print(feed_url, "\n\n")
+    
+        # Return feed list from given versions : 
+        get_raw_feed_from_url(feed_url)
 
 if __name__ == "__main__":
     main()
