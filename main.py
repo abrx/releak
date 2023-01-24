@@ -58,6 +58,7 @@ def main():
 
     print("Liste des users disponibles pour github: ", liste_users_github)
     
+    # TODO ERWIN: passer par une fonction
     print("liste des repos: ")
     for user_github,repo in github_versions.items():
         print("https://github.com/",user_github,"/",repo,"/releases.atom ",sep='')
