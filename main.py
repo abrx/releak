@@ -16,7 +16,7 @@ import feedparser
 
 #####################################################################################
 #                                                                                   #
-#   Fonctions                                                                       #
+#   Functions                                                                       #
 #                                                                                   #
 #####################################################################################
 
@@ -28,14 +28,14 @@ def get_config(config_file="config/versions.yml"):
         source
           user: repo
     """
-    print("Récupération de la configuration dans", config_file)
+    print("Get config file: ", config_file)
 
     with open(config_file) as conf:
         try:
             return load(conf, Loader=FullLoader)
 
         except:
-            print("erreur lors du chargement de la configuration", config_file)
+            print("Error loading configuration: ", config_file)
             raise
 
 
@@ -48,7 +48,7 @@ def get_raw_feed_from_url(url):
         return feed_list
 
     except:
-        print("Erreur lors de la récupération du feed", url)
+        print("Error getting feed: ", url)
         raise
 
 
@@ -71,16 +71,18 @@ def main():
     github_versions = versions["github"]
     liste_users_github = list(github_versions)
 
-    print("Liste des users disponibles pour github: ", liste_users_github, "\n\n")
+    print("Available users for github: ", liste_users_github, "\n\n")
     
     # TODO ERWIN: passer par une fonction
-    print("liste des repos: ")
+    print("Repos list: ")
     for user_github,repo in github_versions.items():
         feed_url = "https://github.com/" + user_github + "/" + repo + "/releases.atom "
         print(feed_url, ": \n\n")
     
-        # Return feed list from given versions : 
+        # Return feed list from given repo : 
         raw = get_raw_feed_from_url(feed_url)
+
+        # raw has both general feed information and release details under entries
         for release in raw.entries:
             print(release.title)
 
