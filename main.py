@@ -81,7 +81,8 @@ def main():
     
         # Return feed list from given versions : 
         raw = get_raw_feed_from_url(feed_url)
-        print(raw.feed, "\n\n")
+        for release in raw.entries:
+            print(release.title)
 
 if __name__ == "__main__":
     main()
