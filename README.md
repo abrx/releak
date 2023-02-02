@@ -40,36 +40,41 @@ Then go to http://127.0.0.1:8000/releak/
 
 ## Roadmap
 
-Features :
-[X] Get basic release info from github with yaml config
-[ ] Get full release data: date, is breaking, link, description
-[ ] Set current releases states (e.g.: grafana = "9.3.1" ) with click and/or config file
-[ ] Export current release state
-[ ] Just launch a job that report differences between upstream and current state
-[ ] Add concept of application to follow different set of releases 
-[ ] Support SBOM ?
+**Features** :
 
-GUI:
-[X] Display basic release info on browser
-[ ] Nice homepage
-[ ] Add a repository to follow via GUI
-[ ] Django hardenning
-[ ] Add stats tab to see how far are we from upstream and breaking changes
-[ ] Add CVE-dedicated tab
+* [X] Get basic release info from * github with yaml config
+* [ ] Get full release data: * date, is breaking, link, * description
+* [ ] Set current releases states * (e.g.: grafana = "9.3.1" ) with * click and/or config file
+* [ ] Export current release state
+* [ ] Just launch a job that * report differences between * upstream and current state
+* [ ] Add concept of application * to follow different set of * releases 
+* [ ] Support SBOM ?
 
-Deployment:
-[ ] Provide docker image
-[ ] Build docker image via CI
-[ ] Provide kubernetes deployment template
+**GUI**:
 
-Supported sources:
-[X] github
-[ ] gitlab
-[ ] gitea
-[ ] kubernetes releases
-[ ] public CVE database
+* [ ] Display basic release info * on browser
+* [ ] Nice homepage
+* [ ] Add a repository to follow * via GUI
+* [ ] Django hardenning
+* [ ] Add stats tab to see how * far are we from upstream and * breaking changes
+* [ ] Add CVE-dedicated tab
 
-Refactoring:
-[ ] Function build_rss_url with choice for provider, default github
-[ ] Sqlite DB vs yaml ?
-[ ] Split main.py so it can be used by Django models
+**Deployment**:
+
+* [ ] Provide docker image
+* [ ] Build docker image via CI
+* [ ] Provide kubernetes deployment template
+
+**Supported sources**:
+
+* [X] github
+* [ ] gitlab
+* [ ] gitea
+* [ ] kubernetes releases
+* [ ] public CVE database
+
+**Refactoring**:
+
+* [ ] Function build_rss_url with * choice for provider, default * github
+* [ ] Sqlite DB vs yaml ?
+* [ ] Split main.py so it can be used by Django models
