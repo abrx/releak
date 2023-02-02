@@ -41,6 +41,7 @@ Then go to http://127.0.0.1:8000/releak/
 ## Roadmap
 
 Features :
+[X] Get basic release info from github and yaml config
 [ ] Get full release data: date, is breaking, link, description
 [ ] Set current releases states (e.g.: grafana = "9.3.1" ) with click and/or config file
 [ ] Export current release state
@@ -49,6 +50,7 @@ Features :
 [ ] Support SBOM ?
 
 GUI:
+[X] Display basic release info on browser
 [ ] Nice homepage
 [ ] Add a repository to follow via GUI
 [ ] Add stats tab to see how far are we from upstream and breaking changes
@@ -60,6 +62,7 @@ Deployment:
 [ ] Provide kubernetes deployment template
 
 Supported sources:
+[X] github
 [ ] gitlab
 [ ] gitea
 [ ] kubernetes releases
