@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from releak import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('releak/', views.home)
 ]
+
