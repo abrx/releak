@@ -71,3 +71,5 @@ Supported sources:
 
 Refactoring:
 [ ] Function build_rss_url with choice for provider, default github
+[ ] Sqlite DB vs yaml ?
+[ ] Split main.py so it can be used by Django models
