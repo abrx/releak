@@ -41,7 +41,7 @@ Then go to http://127.0.0.1:8000/releak/
 ## Roadmap
 
 Features :
-[X] Get basic release info from github and yaml config
+[X] Get basic release info from github with yaml config
 [ ] Get full release data: date, is breaking, link, description
 [ ] Set current releases states (e.g.: grafana = "9.3.1" ) with click and/or config file
 [ ] Export current release state
