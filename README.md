@@ -53,6 +53,7 @@ GUI:
 [X] Display basic release info on browser
 [ ] Nice homepage
 [ ] Add a repository to follow via GUI
+[ ] Django hardenning
 [ ] Add stats tab to see how far are we from upstream and breaking changes
 [ ] Add CVE-dedicated tab
 
@@ -69,4 +70,4 @@ Supported sources:
 [ ] public CVE database
 
 Refactoring:
-[ ] 
+[ ] Function build_rss_url with choice for provider, default github
