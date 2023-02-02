@@ -19,6 +19,7 @@ from releak import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('releak/', views.home)
+    path('releak/', views.home),
+    path('about/', views.about)
 ]
 
