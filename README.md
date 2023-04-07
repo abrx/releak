@@ -28,15 +28,11 @@ Then launch main.py to get releases tags from followed repo:
 python main.py
 ```
 
-## Get releases in your browser
+## IHM
 
-Launch Django server:
+Test with Django => definitly overkill for our needs
 
-```
-python manage.py runserver
-```
-
-Then go to http://127.0.0.1:8000/releak/ 
+> Question is : heavy client with PyQt or web client with flask ?
 
 ## Roadmap
 
@@ -52,7 +48,7 @@ Then go to http://127.0.0.1:8000/releak/
 
 **GUI**:
 
-* [ ] Display basic release info on browser
+* [ ] Display basic release info on browser / windows
 * [ ] Nice homepage
 * [ ] Add a repository to follow via GUI
 * [ ] Django hardenning
