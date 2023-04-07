@@ -1,5 +1,0 @@
-db.sqlite3
-*.log
-*.pyc
-__pycache__
-media
