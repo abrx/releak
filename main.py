@@ -71,7 +71,7 @@ def main():
     github_versions = versions["github"]
     liste_users_github = list(github_versions)
 
-    print("\nAvailable users for github: ", liste_users_github, "\n")
+    # print("\nAvailable users for github: ", liste_users_github, "\n")
     
     # TODO ERWIN: passer par une fonction
 
